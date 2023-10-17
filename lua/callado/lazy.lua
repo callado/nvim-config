@@ -16,5 +16,9 @@ require("lazy").setup({
 		'nvim-telescope/telescope.nvim', tag = '0.1.4',
 		dependencies = { 'nvim-lua/plenary.nvim' }
 	},
+	{
+		"bluz71/vim-nightfly-colors", name = "nightfly", lazy = false, priority = 1000
+	},
 })
 
+vim.cmd [[colorscheme nightfly]]
