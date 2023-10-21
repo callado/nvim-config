@@ -2,7 +2,7 @@ return {
     {
         'VonHeikemen/lsp-zero.nvim',
         branch = 'v3.x',
-        dependencies = { 
+        dependencies = {
             'hrsh7th/cmp-nvim-lsp',
             'hrsh7th/nvim-cmp',
             'L3MON4D3/LuaSnip',
@@ -30,7 +30,7 @@ return {
 
             require('mason').setup({})
             require('mason-lspconfig').setup({
-                ensure_installed = { 'lua-ls', 'bashls', 'clangd', 'rust_analyzer' },
+                ensure_installed = { 'clangd', 'rust_analyzer' },
                 handlers = {
                     lsp_zero.default_setup,
                     lua_ls = function()
@@ -56,7 +56,7 @@ return {
                     ['<C-y>'] = cmp.mapping.confirm({ select = true }),
                     ['<C-Space>'] = cmp.mapping.complete(),
                 }),
-            })    
+            })
         end,
     },
 }
