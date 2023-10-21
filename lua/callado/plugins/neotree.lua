@@ -25,6 +25,38 @@ return {
 			end,
 		},
 	},
+	keys = {
+		-- {
+		-- 	"<leader>fe",
+		-- 	function()
+		-- 		require("neo-tree.command").execute({ toggle = true, dir = Util.root() })
+		-- 	end,
+		-- 	desc = "Explorer NeoTree (root dir)",
+		-- },
+		{
+			"<leader>fe",
+			function()
+				require("neo-tree.command").execute({ toggle = true, dir = vim.loop.cwd() })
+			end,
+			desc = "Explorer NeoTree (cwd)",
+		},
+		-- { "<leader>e", "<leader>fe", desc = "Explorer NeoTree (root dir)", remap = true },
+		{ "<leader>e", "<leader>fe", desc = "Explorer NeoTree (cwd)", remap = true },
+		{
+			"<leader>ge",
+			function()
+				require("neo-tree.command").execute({ source = "git_status", toggle = true })
+			end,
+			desc = "Git explorer",
+		},
+		{
+			"<leader>be",
+			function()
+				require("neo-tree.command").execute({ source = "buffers", toggle = true })
+			end,
+			desc = "Buffer explorer",
+		},
+	},
 	config = function ()
 		-- If you want icons for diagnostic errors, you'll need to define them somewhere:
 		vim.fn.sign_define("DiagnosticSignError",
@@ -129,7 +161,7 @@ return {
 				-- see `:h neo-tree-custom-commands-global`
 				commands = {},
 				window = {
-					position = "left",
+					position = "right",
 					width = 40,
 					mapping_options = {
 						noremap = true,
