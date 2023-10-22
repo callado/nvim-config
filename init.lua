@@ -1,4 +1,3 @@
+require("callado.vimrc")
 require("callado.remap")
 require("callado.lazy")
-
-print("hello there")
