@@ -1,6 +1,6 @@
 return {
-	'nvim-lualine/lualine.nvim',
-	requires = { 'nvim-tree/nvim-web-devicons', opt = true },
+	"nvim-lualine/lualine.nvim",
+	requires = { "nvim-tree/nvim-web-devicons", opt = true },
 	lazy = false,
 	priority = 800,
 	config = function()
@@ -16,11 +16,11 @@ return {
 		for _, mode in ipairs(modes) do
 			theme[mode].c.bg = "NONE"
 		end
-		
-		require('lualine').setup({
-			options = { 
+
+		require("lualine").setup({
+			options = {
 				theme = theme,
-			}
+			},
 		})
 	end,
 }

@@ -1,11 +1,11 @@
 local M = {
 	"nvim-treesitter/nvim-treesitter",
-	build = function() 
+	build = function()
 		require("nvim-treesitter.install").update({ with_sync = true })()
 	end,
 	config = function()
 		require("nvim-treesitter.install").compilers = { "clang", "cl", "gcc" }
-		require("nvim-treesitter.configs").setup {
+		require("nvim-treesitter.configs").setup({
 			-- A directory to install the parsers into.
 			-- If this is excluded or nil parsers are installed
 			-- to either the package dir, or the "site" dir.
@@ -40,7 +40,7 @@ local M = {
 			indent = {
 				enable = true,
 			},
-		}
+		})
 		-- vim.opt.runtimepath:append("C:\\Users\\PedroCalladoVersiani\\AppData\\Local\\nvim-data\\lazy\\nvim-treesitter\\parseR")
 	end,
 }
