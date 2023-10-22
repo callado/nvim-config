@@ -13,6 +13,7 @@ return {
 		config = function()
 			local lsp_zero = require("lsp-zero")
 
+			---@diagnostic disable-next-line: unused-local
 			lsp_zero.on_attach(function(client, bufnr)
 				local opts = { buffer = bufnr, remap = false }
 				vim.keymap.set("n", "gd", function()
