@@ -9,6 +9,7 @@ return {
 			"williamboman/mason.nvim",
 			"williamboman/mason-lspconfig.nvim",
 			"neovim/nvim-lspconfig",
+			"folke/neodev.nvim",
 		},
 		config = function()
 			local lsp_zero = require("lsp-zero")
