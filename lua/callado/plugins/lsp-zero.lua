@@ -2,6 +2,7 @@ return {
 	{
 		"VonHeikemen/lsp-zero.nvim",
 		branch = "v3.x",
+		enabled = false,
 		dependencies = {
 			"hrsh7th/cmp-nvim-lsp",
 			"hrsh7th/nvim-cmp",

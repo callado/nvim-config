@@ -2,16 +2,16 @@ return {
 	"stevearc/dressing.nvim",
 	enabled = false,
 	opts = {},
-	init = function()
-		vim.ui.select = function(...)
-			require("dressing").setup()
-			return vim.ui.select(...)
-		end
-		vim.ui.input = function(...)
-			require("dressing").setup()
-			return vim.ui.input(...)
-		end
-	end,
+	-- init = function()
+	-- 	vim.ui.select = function(...)
+	-- 		require("dressing").setup()
+	-- 		return vim.ui.select(...)
+	-- 	end
+	-- 	vim.ui.input = function(...)
+	-- 		require("dressing").setup()
+	-- 		return vim.ui.input(...)
+	-- 	end
+	-- end,
 	-- config = function()
 	-- 	require("dressing").setup({
 	-- 		input = {

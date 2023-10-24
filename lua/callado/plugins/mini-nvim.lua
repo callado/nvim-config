@@ -1,6 +1,7 @@
 return {
 	"echasnovski/mini.nvim",
 	version = false,
+	enabled = false,
 	init = function()
 		require("mini.pairs").setup()
 	end,
